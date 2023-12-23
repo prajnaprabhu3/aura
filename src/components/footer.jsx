@@ -2,9 +2,9 @@ import { ArrowUpRight } from "lucide-react";
 
 const Footer = () => {
   return (
-    <div className="mx-auto py-4">
+    <div className="mx-auto py-1 md:py-4">
       <div className="flex gap-x-1.5 w-[230px] mx-auto ">
-        <p className="text-zinc-400 dark:text-zinc-600 transition-all duration-200 ease-out">
+        <p className="text-sm md:text-base text-zinc-400 dark:text-zinc-600 transition-all duration-200 ease-out">
           Crafted with care by
         </p>
 

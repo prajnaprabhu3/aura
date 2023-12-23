@@ -10,7 +10,7 @@ const DisplayImage = ({ uploadedImage, colorPalette }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center my-12">
+    <div className="flex flex-col items-center justify-center my-8 md:my-12">
       <div>
         {uploadedImage ? (
           <Image

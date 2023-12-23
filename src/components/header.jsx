@@ -6,7 +6,7 @@ const Header = ({ handleChange }) => {
     <header className="py-4">
       <div className="flex justify-around mx-auto md:px-14">
         {/* logo  */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 cursor-pointer">
           <Palette size={18} />
           <h2 className="text-md md:text-lg">aura</h2>
         </div>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import ColorThief from "colorthief";
 import DisplayImage from "@/components/displayImage";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 export default function Home() {
   const [upload, setUpload] = useState(null);
@@ -31,9 +32,10 @@ export default function Home() {
   };
 
   return (
-    <main className="h-screen">
+    <main className="h-screen flex flex-col justify-between">
       <Header handleChange={handleUpload} />
       <DisplayImage uploadedImage={upload} colorPalette={colorPalette} />
+      <Footer />
     </main>
   );
 }

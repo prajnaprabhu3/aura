@@ -10,7 +10,7 @@ const DisplayImage = ({ uploadedImage, colorPalette }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center my-20">
+    <div className="flex flex-col items-center justify-center my-12">
       <div>
         {uploadedImage ? (
           <Image
@@ -21,18 +21,27 @@ const DisplayImage = ({ uploadedImage, colorPalette }) => {
             className="object-cover  w-80 md:w-[600px] rounded-xl"
           />
         ) : (
-          <div>Please upload an image!</div>
+          <div className="flex flex-col gap-6 md:gap-10">
+            <img
+              src="/upload.svg"
+              alt=""
+              className="h-20 md:h-32 opacity-70 text-gray-800"
+            />
+            <p className="text-sm md:text-base text-gray-400 text-center">
+              Please upload an image!
+            </p>
+          </div>
         )}
       </div>
 
       {/* palette  */}
       {colorPalette && (
-        <ul className="flex flex-wrap gap-12 md:gap-14 justify-center my-32">
+        <ul className="flex flex-wrap gap-12 md:gap-14 justify-center mt-20">
           {colorPalette.map((color) => {
             const rgb = `rgb(${color.join(",")})`;
             // console.log(rgb)
             // console.log("#" + toHex(color[0]) + toHex(color[1]) + toHex(color[2]));
-            const hex = `"#${toHex(color[0])}${toHex(color[1])}${toHex(
+            const hex = `#${toHex(color[0])}${toHex(color[1])}${toHex(
               color[2]
             )}`;
             return <Color key={color} rgb={rgb} hex={hex} />;

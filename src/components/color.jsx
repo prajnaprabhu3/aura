@@ -19,7 +19,7 @@ const Color = ({ rgb, hex }) => {
   };
 
   return (
-    <li className="bg-gray-100 dark:bg-zinc-800 border dark:border-gray-800 p-1.5 md:p-2 rounded-lg relative hover:cursor-pointer hover:-translate-y-1 transition-all">
+    <li className="bg-gray-100 dark:bg-zinc-800 border border-gray-200 dark:border-gray-900 p-1.5 md:p-2 rounded-lg relative hover:cursor-pointer hover:-translate-y-1 transition-all">
       <div
         style={{ background: rgb }}
         className={`bg-${rgb} h-32 w-24 md:h-40 md:w-32 rounded-lg`}

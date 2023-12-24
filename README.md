@@ -1,17 +1,20 @@
-# aura
+![aura](/public/aura.png)
 
-A web application that generats the color palette of the image uploaded
+### Aura
 
-## Features
+A web application that generates the colors used in the uploaded image!
+
+### Features
 
 - Toggle theme as per convenience
 - Get the color palette of the image
 - Copy the color hexcode
 
-## todo
+### todo
 
 - [ ] handle edge cases like
-  - [ ] allow only image format upload
-- [ ] add footer signature
+  - [ ] allow only images(including svg) format to select
+- [x] add footer signature
 - [ ] animations
-- [ ] backkground texture or svg of any kind
+- [ ] noisy backkground
+- [ ] copy rgb value

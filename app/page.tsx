@@ -1,17 +1,9 @@
-import { ThemeSwitcher } from "@/components/theme-switcher";
-import { Caveat } from "next/font/google";
-
-const caveat = Caveat({
-  subsets: ["latin"],
-  weight: ["600"],
-});
+import UploadImage from "@/components/upload-image";
 
 export default function Home() {
   return (
-    <div>
-      Hi
-      <p className={`${caveat.className}`}>Drag and Drop your Image</p>
-      <ThemeSwitcher />
-    </div>
+    <main className="h-screen justify-center items-center flex flex-col">
+      <UploadImage />
+    </main>
   );
 }

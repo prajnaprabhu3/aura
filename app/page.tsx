@@ -1,13 +1,15 @@
+"use client";
+
 import MainComponent from "@/components/main-component";
-import DialogDemo from "@/components/ui/dialog";
 import UploadImage from "@/components/upload-image";
+import { UploadContext } from "@/context/useUploadData";
+import { useContext } from "react";
 
 export default function Home() {
+  const { upload } = useContext(UploadContext);
   return (
     <main className="h-screen justify-center items-center flex flex-col">
-      <UploadImage />
-      {/* <MainComponent /> */}
-      {/* <DialogDemo /> */}
+      {upload ? <MainComponent /> : <UploadImage />}
     </main>
   );
 }

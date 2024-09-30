@@ -11,7 +11,11 @@ const caveat = Caveat({
   weight: ["600"],
 });
 
-export default function UploadImage() {
+type UploadImageProps = {
+  onImageUpload: () => void;
+};
+
+export default function UploadImage({ onImageUpload }: UploadImageProps) {
   const { upload, setUpload, colorPalette, setColorPalette } =
     useContext(UploadContext);
 
@@ -23,6 +27,7 @@ export default function UploadImage() {
       const { uploadValue, colorPaletteList } = await getImageUploadData(file);
       setUpload(uploadValue);
       setColorPalette(colorPaletteList);
+      onImageUpload();
     } catch (error) {
       console.error("Error uploading image:", error);
     }
@@ -62,33 +67,6 @@ export default function UploadImage() {
           </p>
         </div>
       </div>
-      {upload && (
-        <div className="mt-4">
-          <h3>Uploaded Image:</h3>
-          <img
-            src={upload}
-            alt="Uploaded"
-            style={{ maxWidth: "100%", maxHeight: "200px" }}
-          />
-        </div>
-      )}
-      {colorPalette && colorPalette.length > 0 && (
-        <div className="mt-4">
-          <h3>Color Palette:</h3>
-          <div className="flex">
-            {colorPalette.map((color, index) => (
-              <div
-                key={index}
-                style={{
-                  backgroundColor: `rgb(${color[0]}, ${color[1]}, ${color[2]})`,
-                  width: "50px",
-                  height: "50px",
-                }}
-              />
-            ))}
-          </div>
-        </div>
-      )}
     </div>
   );
 }

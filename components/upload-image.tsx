@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { Caveat } from "next/font/google";
 import { getImageUploadData } from "@/libs/upload";
+import { UploadContext } from "@/context/useUploadData";
 
 const caveat = Caveat({
   subsets: ["latin"],
@@ -11,8 +12,8 @@ const caveat = Caveat({
 });
 
 export default function UploadImage() {
-  const [upload, setUpload] = useState<string | null>(null);
-  const [colorPalette, setColorPalette] = useState<number[][] | undefined>([]);
+  const { upload, setUpload, colorPalette, setColorPalette } =
+    useContext(UploadContext);
 
   const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -26,6 +27,11 @@ export default function UploadImage() {
       console.error("Error uploading image:", error);
     }
   };
+
+  useEffect(() => {
+    console.log(upload, "upload");
+    console.log(colorPalette, "palette");
+  }, [upload, colorPalette]);
 
   return (
     <div>

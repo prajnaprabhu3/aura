@@ -1,20 +1,21 @@
-![aura](/public/aura.png)
-
-### Aura
-
-A web application that generates the colors used in the uploaded image!
-
-### Features
-
-- Toggle theme as per convenience
-- Get the color palette of the image
-- Copy the color hexcode
-
-### todo
-
-- [ ] handle edge cases like
-  - [ ] allow only images(including svg) format to select
-- [x] add footer signature
+Todo
+UI
+- [x] Empty state, upload image component
+- [x] image display component
+- [x] colors component
+    - [x] display hexcode, rgb and hsl values
+- [ ] Created by footer
 - [ ] animations
-- [ ] noisy backkground
-- [ ] copy rgb value
+    - [ ] upload component interaction
+    - [ ] color tabs switch animation
+    - [ ] upload icon infinite interaction
+- [ ] responsive
+    
+
+Functionality
+- [ ] Upload files
+    - [ ] handle edge case to allow only image formats (jpg,jpeg,png,webp)
+    - [x] allow single file to be selected
+- [x] extract top 7 colors from the image
+- [x] handle states
+- [ ] creator scroll interaction

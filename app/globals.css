@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+.handwritten-text {
+  font-family: 'Caveat', cursive;
+  font-size: 30px;
+  color: #666;
+  font-weight:bolder;
+}
+
+
+

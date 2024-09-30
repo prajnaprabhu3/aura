@@ -12,7 +12,7 @@ const caveat = Caveat({
 });
 
 type UploadImageProps = {
-  onImageUpload: () => void;
+  onImageUpload?: () => void;
 };
 
 export default function UploadImage({ onImageUpload }: UploadImageProps) {
@@ -27,7 +27,7 @@ export default function UploadImage({ onImageUpload }: UploadImageProps) {
       const { uploadValue, colorPaletteList } = await getImageUploadData(file);
       setUpload(uploadValue);
       setColorPalette(colorPaletteList);
-      onImageUpload();
+      if (onImageUpload) onImageUpload();
     } catch (error) {
       console.error("Error uploading image:", error);
     }

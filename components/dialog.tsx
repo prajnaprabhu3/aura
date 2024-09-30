@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Cross2Icon } from "@radix-ui/react-icons";
 import UploadImage from "./upload-image";
-import { Image } from "lucide-react";
+import { Image as ImageIcon } from "lucide-react";
 
 const UploadDialog = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +16,7 @@ const UploadDialog = () => {
     <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
       <Dialog.Trigger asChild>
         <button className="flex items-center gap-x-1">
-          <Image size={15} />
+          <ImageIcon size={15} />
           Upload
         </button>
       </Dialog.Trigger>

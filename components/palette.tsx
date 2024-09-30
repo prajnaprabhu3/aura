@@ -1,10 +1,8 @@
 "use client";
 
 import { UploadContext } from "@/context/useUploadData";
-import * as Dialog from "@radix-ui/react-dialog";
-import { Cross2Icon } from "@radix-ui/react-icons";
 import { useContext, useState } from "react";
-import { Copy, CircleCheck, Image, ArrowDownToLine } from "lucide-react";
+import { Copy, CircleCheck, ArrowDownToLine } from "lucide-react";
 import { getRequiredFormatValue } from "@/libs/getRequiredFormatValue";
 import UploadDialog from "./dialog";
 
@@ -41,6 +39,7 @@ export default function Palette() {
               return (
                 // <div className="p-1 bg-gray-100 border dark:bg-zinc-700 rounded">
                 <div
+                  key={index}
                   style={{ background: rgb }}
                   className="h-8 w-8 rounded cursor-pointer border"
                   onClick={() => setActiveColor(index)}

@@ -1,9 +1,9 @@
 Todo
 UI
 - [x] Empty state, upload image component
-- [ ] image display component
-- [ ] colors component
-    - [ ] display hexcode, rgb and hsl values
+- [x] image display component
+- [x] colors component
+    - [x] display hexcode, rgb and hsl values
 - [ ] Created by footer
 - [ ] animations
     - [ ] upload component interaction
@@ -15,7 +15,7 @@ UI
 Functionality
 - [ ] Upload files
     - [ ] handle edge case to allow only image formats (jpg,jpeg,png,webp)
-    - [ ] allow single file to be selected
-- [ ] extract top 7 colors from the image
-- [ ] handle states
+    - [x] allow single file to be selected
+- [x] extract top 7 colors from the image
+- [x] handle states
 - [ ] creator scroll interaction

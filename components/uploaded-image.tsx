@@ -1,6 +1,6 @@
 "use client";
 import { UploadContext } from "@/context/useUploadData";
-import Image from "next/image";
+// import Image from "next/image";
 import { useContext } from "react";
 
 export default function UploadedImage() {
@@ -16,6 +16,7 @@ export default function UploadedImage() {
         className="rounded-xl h-[500px] w-fit"
       /> */}
       <img
+        alt="image"
         src={upload!}
         className="h-[500px] w-fit object-contain rounded-xl"
       />

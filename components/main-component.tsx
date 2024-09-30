@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Palette from "./palette";
 import UploadedImage from "./uploaded-image";
 

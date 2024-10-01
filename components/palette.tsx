@@ -1,7 +1,7 @@
 "use client";
 
 import { UploadContext } from "@/context/useUploadData";
-import { act, useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { Copy, CircleCheck, ArrowDownToLine } from "lucide-react";
 import { getRequiredFormatValue } from "@/libs/getRequiredFormatValue";
 import UploadDialog from "./dialog";

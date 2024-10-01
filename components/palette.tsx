@@ -28,38 +28,39 @@ export default function Palette() {
 
   console.log(colorPalette, "palette within palette");
   return (
-    <div className="w-fit text-zinc-600 bg-white dark:bg-secondaryDark  h-fit border border-gray-300 dark:border-zinc-700 rounded-xl py-4">
+    <div className="w-fit text-zinc-600 bg-white dark:text-gray-200 dark:bg-secondaryDark  h-fit border border-gray-300 dark:border-zinc-700 rounded-xl py-4">
       <div className="px-4">
-        <h4 className="mb-2">Palette</h4>
+        <h4 className="mb-2 dark:text-gray-200">Palette</h4>
 
         {colorPalette && (
           <div className="flex gap-x-2 my-4">
             {colorPalette?.map((color, index) => {
               const rgb = `rgb(${color.join(",")})`;
               return (
-                // <div className="p-1 bg-gray-100 border dark:bg-zinc-700 rounded">
                 <div
                   key={index}
                   style={{ background: rgb }}
-                  className="h-8 w-8 rounded cursor-pointer border"
+                  className={`h-8 w-8 rounded cursor-pointer ${
+                    index === activeColor &&
+                    " border-2 border-gray-500 dark:border-white drop-shadow-xl"
+                  }`}
                   onClick={() => setActiveColor(index)}
                 ></div>
-                // </div>
               );
             })}
           </div>
         )}
       </div>
 
-      <hr />
+      <hr className="dark:border-zinc-700" />
 
-      <div className="px-4 my-6 flex  w-full">
-        <div>
+      <div className="px-4 my-6 flex items-start w-full">
+        <div className="mr-2">
           <div
             style={{
               background: `rgb(${colorPalette![activeColor]?.join(",")})`,
             }}
-            className="h-9 w-9 rounded mr-2"
+            className="h-9 w-9 rounded dark:border-2  dark:border-white"
           ></div>
         </div>
 
@@ -69,19 +70,19 @@ export default function Palette() {
             return (
               <button
                 key={index}
-                className="flex justify-between items-center border rounded-lg px-2 py-1.5 h-fit w-full"
+                className="flex justify-between items-center border dark:border-zinc-700 rounded-lg px-2 py-1.5 h-fit w-full"
                 onClick={() => handleCopy(value, item)}
               >
                 <p className="flex items-center gap-x-2">
                   {copiedFormat === item ? (
                     <CircleCheck
                       size={15}
-                      className="font-light text-gray-500"
+                      className="font-light text-green-500 dark:text-green-400"
                     />
                   ) : (
                     <Copy
                       size={15}
-                      className=" text-gray-500 font-extralight"
+                      className="font-light text-gray-500 dark:text-gray-200"
                     />
                   )}
                   <p className="text-sm font-semibold">{item}</p>
@@ -93,9 +94,9 @@ export default function Palette() {
         </div>
       </div>
 
-      <hr />
+      <hr className="dark:border-zinc-700" />
 
-      <div className="flex justify-between px-4 mt-3">
+      <div className="flex justify-between px-4 mt-3.5 dark:text-gray-200 text-sm">
         <button className="flex items-center gap-x-1">
           <ArrowDownToLine size={15} />
           Download

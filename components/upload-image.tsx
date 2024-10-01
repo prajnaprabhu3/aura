@@ -45,7 +45,7 @@ export default function UploadImage({ onImageUpload }: UploadImageProps) {
       >
         Drag and Drop your File
       </h4>
-      <div className="bg-white dark:bg-[#1B1B1B] p-3 rounded-xl drop-shadow-sm w-fit">
+      <div className="bg-white dark:bg-[#1B1B1B] p-3 rounded-xl drop-shadow-md w-fit">
         <div className="flex flex-col justify-center items-center w-80 h-44 p-4 border border-dashed border-gray-300 dark:border-zinc-700 rounded-lg bg-primaryLight dark:bg-primaryDark">
           <input
             type="file"
